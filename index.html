@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screenshot Mockup Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <span class="badge">🖼️ Mockup Tool</span>
+        <h1>Website Screenshot Mockup</h1>
+        <p>Upload screenshot and wrap it inside a browser frame</p>
+    </div>
+
+    <div class="grid">
+
+        <!-- INPUT -->
+        <div class="card">
+
+            <div class="field">
+
+                <label>Upload Screenshot</label>
+
+                <input type="file" id="imageInput" accept="image/*">
+
+            </div>
+
+            <div class="field">
+
+                <label>Browser Type</label>
+
+                <select id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Firefox</option>
+                    <option value="edge">Edge</option>
+                    <option value="safari">Safari</option>
+                </select>
+
+            </div>
+
+            <button id="generateBtn">Generate Mockup</button>
+
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="card preview">
+
+            <div class="browser-frame" id="frame">
+
+                <div class="top-bar">
+
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+
+                    <div class="url">https://your-site.com</div>
+
+                </div>
+
+                <div class="screen">
+
+                    <img id="outputImg" src="" alt="preview">
+
+                    <div class="placeholder" id="placeholder">
+                        Upload screenshot to preview
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
